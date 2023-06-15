@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check the path on the browser console log</title>
+</head>
+<body>
+
+  <svg class="your-svg-id" width="890" height="890" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path id="example-draw1" d="M415.5 871.5L430 875.5L848 802.5L857.5 798.5L863 792.5L867 784.5V776.5L543.5 300L533.5 294L521.5 292H502L243 321.5L222 324L208 326.5L198 328.5L189.5 332L183.5 335.5L178 340L174.5 345.5V354L393.5 852.5L404 865L415.5 871.5Z" fill="#613E3E" stroke="#282828" stroke-width="2" />
+</svg>
+  <script>
+    window.onload = function() {
+      var paths = document.querySelectorAll('.your-svg-id path');
+
+      paths.forEach(path => {
+        console.log(path.id, path.getTotalLength());
+      });
+    }
+  </script>
+
+</body>
+</html>
